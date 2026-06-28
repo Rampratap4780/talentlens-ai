@@ -1,0 +1,51 @@
+rank,candidate_id,name,headline,location,country,years_exp,skill_score,exp_score,career_score,behavioral_score,assessment_score,overall_score,open_to_work,notice_days,last_active_days,github_score,response_rate,salary_min_lpa,salary_max_lpa,recommendation
+1,CAND_0000031,"Ela Singh","Recommendation Systems Engineer | Search, Ranking & Retrieval","Hyderabad, Telangana",India,6,100,100,100,71,64,96,true,60,28,32.6,91%,,,shortlisted
+2,CAND_0000043,"Aarav Sen","Cloud Engineer | Full-stack development","Chandigarh, Chandigarh",India,8.3,90,100,100,10,40,70,false,120,171,-1,4%,,,shortlisted
+3,CAND_0000001,"Ira Vora","Backend Engineer | SQL, Spark, Cloud","Toronto",Canada,6.9,60,100,80,51,50,59,true,60,32,9.2,34%,,,shortlisted
+4,CAND_0000014,"Atharv Joshi","Frontend Engineer | Full-stack development","Hyderabad, Telangana",India,8.4,42,100,80,31,78,45,false,90,70,-1,80%,,,maybe
+5,CAND_0000025,"Anika Kumar","Frontend Engineer | Cloud & DevOps","Vizag, Andhra Pradesh",India,7.3,25,100,100,48,40,45,true,120,83,-1,74%,,,maybe
+6,CAND_0000035,"Vikram Verma","Full Stack Developer | Backend systems & APIs","Hyderabad, Telangana",India,4.3,34,82,60,18,40,45,false,60,135,-1,34%,,,maybe
+7,CAND_0000038,"Myra Trivedi","Java Developer | Cloud & DevOps","Coimbatore, Tamil Nadu",India,6.7,35,100,100,36,40,45,true,90,82,37.8,20%,,,maybe
+8,CAND_0000010,"Aarav Kapoor","Data Engineer | Data pipelines & analytics","London",UK,4.6,39,82,40,28,68,42,false,120,53,33.7,40%,,,maybe
+9,CAND_0000015,"Rahul Agarwal","Software Engineer | Cloud & DevOps","Trivandrum, Kerala",India,5.4,27,100,100,34,40,41,true,90,129,-1,32%,,,maybe
+10,CAND_0000032,"Pranav Agarwal",".NET Developer | Full-stack development","Gurgaon, Haryana",India,8.1,53,100,60,24,40,41,false,150,174,-1,69%,,,maybe
+11,CAND_0000011,"Deepak Desai","QA Engineer | Cloud & DevOps","Hyderabad, Telangana",India,2,31,25,60,19,30,35,false,90,153,32.3,56%,,,maybe
+12,CAND_0000027,"Avni Pandey","DevOps Engineer | Cloud & DevOps","Kolkata, West Bengal",India,3.9,34,58,16,50,49,27,true,90,45,38.6,58%,,,rejected
+13,CAND_0000033,"Shreya Nair","Graphic Designer | Helping teams scale","Pune, Maharashtra",India,8.6,19,100,0,40,40,22,true,30,86,38.3,8%,,,rejected
+14,CAND_0000045,"Vikram Mittal","Project Manager | 12.2+ yrs experience","Indore, Madhya Pradesh",India,12.2,13,62,0,52,40,21,true,60,58,-1,62%,,,rejected
+15,CAND_0000041,"Anjali Khanna","Operations Manager | Helping teams scale","Delhi, Delhi",India,13.7,14,62,0,31,40,20,true,90,97,-1,7%,,,rejected
+16,CAND_0000007,"Vihaan Bose","Civil Engineer | 5.5+ yrs experience","Gurgaon, Haryana",India,5.5,8,100,0,50,40,18,false,30,27,-1,62%,,,rejected
+17,CAND_0000013,"Pari Nair","Civil Engineer | Driving business outcomes","Dubai",UAE,1.1,26,25,0,42,40,18,true,30,87,35.6,28%,,,rejected
+18,CAND_0000016,"Aanya Malhotra","Accountant | Helping teams scale","Gurgaon, Haryana",India,5.3,5,100,0,45,40,18,true,60,182,42.9,64%,,,rejected
+19,CAND_0000021,"Rahul Joshi","Project Manager | AI enthusiast | Building with LLMs","Bhubaneswar, Odisha",India,14.5,95,62,0,22,40,18,false,60,212,6.4,49%,,,rejected
+20,CAND_0000039,"Sai Saxena","Marketing Manager | Helping teams scale","Bhubaneswar, Odisha",India,3.9,13,58,0,33,40,18,false,30,64,-1,52%,,,rejected
+21,CAND_0000044,"Vihaan Naidu","Frontend Engineer | Backend systems & APIs","Indore, Madhya Pradesh",India,5.7,12,100,60,23,40,18,false,90,192,6.5,66%,,,rejected
+22,CAND_0000048,"Vihaan Saxena","Mobile Developer | Full-stack development","Hyderabad, Telangana",India,9.7,0,78,100,43,40,18,true,120,76,-1,65%,,,rejected
+23,CAND_0000050,"Naina Bose","Business Analyst | Helping teams scale","Gurgaon, Haryana",India,13.5,13,62,0,16,61,17,false,90,242,44.7,42%,,,rejected
+24,CAND_0000018,"Vivaan Reddy","Frontend Engineer | Full-stack development","Bhubaneswar, Odisha",India,6.6,6,100,60,12,40,16,false,120,123,-1,16%,,,rejected
+25,CAND_0000023,"Kavya Nair","Software Engineer | Cloud & DevOps","New York",USA,3.7,0,58,60,38,40,16,false,30,76,48.5,57%,,,rejected
+26,CAND_0000026,"Neha Rao","Graphic Designer | 6.8+ yrs experience","Kochi, Kerala",India,6.8,13,100,0,29,40,15,false,30,261,-1,59%,,,rejected
+27,CAND_0000002,"Saanvi Sethi","Operations Manager | 12.5+ yrs experience","Chennai, Tamil Nadu",India,12.5,12,62,0,36,40,14,true,60,221,-1,29%,,,rejected
+28,CAND_0000005,"Aisha Sethi","Accountant | Helping teams scale","Gurgaon, Haryana",India,11,0,78,0,45,40,14,true,30,263,-1,37%,,,rejected
+29,CAND_0000019,"Myra Mishra","Project Manager | 6.5+ yrs experience","Trivandrum, Kerala",India,6.5,0,100,0,27,40,14,false,60,31,-1,34%,,,rejected
+30,CAND_0000029,"Priya Sethi","Business Analyst | Driving business outcomes","Noida, Uttar Pradesh",India,7.2,0,100,0,15,40,14,false,60,265,42.5,12%,,,rejected
+31,CAND_0000020,"Aditya Iyengar","Mechanical Engineer | 6.3+ yrs experience","Ahmedabad, Gujarat",India,6.3,0,100,0,30,54,12,false,30,259,-1,55%,,,rejected
+32,CAND_0000036,"Ananya Bose","Project Manager | 11.3+ yrs experience","Trivandrum, Kerala",India,11.3,0,78,0,41,40,12,true,60,191,-1,40%,,,rejected
+33,CAND_0000004,"Anil Bose","Marketing Manager | Driving business outcomes","Sydney",Australia,3.8,14,58,0,16,40,11,false,120,88,-1,26%,,,rejected
+34,CAND_0000024,"Rajesh Arora","HR Manager | 7.5+ yrs experience","Trivandrum, Kerala",India,7.5,0,100,0,30,65,11,false,60,152,46.3,78%,,,rejected
+35,CAND_0000030,"Ritu Pillai","Marketing Manager | Driving business outcomes","Kochi, Kerala",India,10,0,78,0,28,40,11,false,60,237,21.7,66%,,,rejected
+36,CAND_0000049,"Tanya Chowdary","Mechanical Engineer | Helping teams scale","Berlin",Germany,11.8,6,78,0,33,40,11,false,120,39,-1,59%,,,rejected
+37,CAND_0000012,"Anjali Krishnan","Operations Manager | Driving business outcomes","Chandigarh, Chandigarh",India,1.1,12,25,0,14,40,10,false,60,236,-1,16%,,,rejected
+38,CAND_0000017,"Anil Pandey","Accountant | 12.3+ yrs experience","Bangalore, Karnataka",India,12.3,0,62,0,10,40,10,false,90,229,-1,27%,,,rejected
+39,CAND_0000040,"Dev Vora","Customer Support | Helping teams scale","Kochi, Kerala",India,1.6,6,25,0,19,40,10,false,90,141,-1,46%,,,rejected
+40,CAND_0000046,"Dev Nair","Mechanical Engineer | 7.8+ yrs experience","London",UK,7.8,0,100,0,24,40,10,false,30,121,20.9,41%,,,rejected
+41,CAND_0000006,"Rajesh Desai","Business Analyst | 6.0+ yrs experience","Austin",USA,6,0,100,0,10,40,9,false,150,113,-1,12%,,,rejected
+42,CAND_0000022,"Shaurya Chatterjee","Mechanical Engineer | Driving business outcomes","Sydney",Australia,1.1,0,25,0,43,40,9,true,150,49,-1,27%,,,rejected
+43,CAND_0000034,"Yash Chatterjee","Business Analyst | Driving business outcomes","Ahmedabad, Gujarat",India,14.5,0,62,0,8,40,9,false,90,169,-1,15%,,,rejected
+44,CAND_0000042,"Riya Mukherjee","HR Manager | 5.0+ yrs experience","Berlin",Germany,5,0,100,0,28,40,9,false,30,241,-1,58%,,,rejected
+45,CAND_0000037,"Ved Sen","Business Analyst | 14.3+ yrs experience","Dubai",UAE,14.3,0,62,0,35,40,8,false,30,192,-1,78%,,,rejected
+46,CAND_0000008,"Shaurya Chatterjee","Operations Manager | 3.6+ yrs experience","Noida, Uttar Pradesh",India,3.6,5,58,0,18,40,7,false,90,190,-1,42%,,,rejected
+47,CAND_0000009,"Amit Shah","Mechanical Engineer | Driving business outcomes","New York",USA,11,0,78,0,18,40,7,false,150,145,-1,53%,,,rejected
+48,CAND_0000028,"Rohan Krishnan","Operations Manager | Driving business outcomes","Dubai",UAE,1.1,12,25,0,23,40,7,false,60,82,-1,14%,,,rejected
+49,CAND_0000047,"Avni Bansal","Project Manager | Helping teams scale","Kochi, Kerala",India,2.4,0,25,0,16,40,6,false,90,91,-1,39%,,,rejected
+50,CAND_0000003,"Yash Agarwal","Customer Support | 1.1+ yrs experience","Austin",USA,1.1,0,25,0,20,40,3,false,150,92,-1,46%,,,rejected
