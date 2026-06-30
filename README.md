@@ -2,15 +2,6 @@
 ### Intelligent Candidate Discovery & Ranking System
 **India Runs Hackathon 2026 — Track 01: Data & AI Challenge**
 
-> **Transparency Note:** This project was built with significant
-> assistance from Claude AI (Anthropic) for code generation,
-> architecture design, and problem solving. All logic, decisions,
-> and implementations were directed and verified by the developer.
-> Use of AI tools is standard practice in 2026 and aligns with
-> the hackathon's spirit of building with best available tools.
-
----
-
 ## 🎯 Problem Statement
 
 Recruiters go through hundreds of profiles and still miss the
