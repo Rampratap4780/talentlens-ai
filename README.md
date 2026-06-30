@@ -22,14 +22,6 @@ would — not by matching keywords, but by actually understanding
 who fits the role.
 
 ---
-<!-- 
-## 🚀 Live Demo
-
-- **Frontend:** https://talentlens-ai.vercel.app
-- **Backend API:** https://talentlens-api.render.com
-- **Health Check:** https://talentlens-api.render.com/health -->
-
----
 
 ## ✨ Key Features
 
@@ -37,8 +29,6 @@ who fits the role.
 - Resumes + JD converted to 768-dim vectors
 - Gemini text-embedding-001 model
 - Cosine similarity finds meaning not keywords
-- "engineer who builds scalable systems" finds
-  "designed distributed architecture for 10M users"
 
 ### 2. 📊 Multi-Signal Scoring (6 Dimensions)
 ```
@@ -51,31 +41,19 @@ Location Match       5% — Pune/Noida preferred
 ```
 
 ### 3. 🔴 Behavioral Signal Integration
-8 real Redrob platform signals used:
-- Last active date (inactive 180d+ = penalized)
-- Recruiter response rate
-- Interview completion rate
-- Open to work flag
-- GitHub activity score
-- Notice period days
-- Profile completeness
-- Offer acceptance rate
+8 real Redrob platform signals: last active date,
+recruiter response rate, interview completion rate,
+open to work flag, GitHub activity score, notice
+period days, profile completeness, offer acceptance rate
 
 ### 4. 🤖 AI Explainability
-- "Why This Candidate?" natural language explanation
-- Head-to-Head AI comparison mode
-- No black box — every score traceable
+"Why This Candidate?" + Head-to-Head AI comparison
 
 ### 5. ⚡ Smart JD Analyzer
-- Paste any JD → AI extracts requirements
-- Instant semantic candidate matching
-- Works with any job description format
+Paste any JD → AI extracts requirements + matches candidates
 
 ### 6. 🛡️ Live Skill Verification
-- 60-second Fix-the-Bug coding test
-- AI generates unique question per candidate
-- Anti-cheat: tab detection, server-side timer,
-  difficulty scaling, Moire pattern overlay
+60-second Fix-the-Bug coding test with anti-cheat system
 
 ### 7. 🚨 Smart Disqualification Engine
 ```
@@ -87,8 +65,187 @@ Outside India:                              → x0.87
 ```
 
 ### 8. 👥 Dual Portal System
-- HR Portal: Dashboard, JD Analyzer, Compare, Export
-- Candidate Portal: Browse Jobs, Upload Resume, Skill Test, My Profile
+HR Portal (Dashboard, JD Analyzer, Compare, Export) +
+Candidate Portal (Jobs, Resume Upload, Skill Test, Profile)
+
+---
+
+## 📖 How to Use Each Feature
+
+### 🏢 For HR / Recruiters
+
+**A. Login to HR Portal**
+```
+1. Go to /login?role=admin
+2. Email:    admin@talentlens.ai
+3. Password: admin123
+4. Click "Sign In as HR Admin"
+→ Redirects to HR Dashboard
+```
+
+**B. View Ranked Candidates Dashboard**
+```
+1. Go to /hr (or click "Dashboard" in navbar)
+2. See stats cards: Total, Shortlisted, Tests, Avg Score
+3. Browse ranked candidate list (sorted by overall score)
+4. Click any candidate to see full details on right panel
+```
+
+**C. Use "Why This Candidate?" AI Explainer**
+```
+1. Click on any candidate in the list
+2. Click "🤖 Why This Candidate?" button
+3. Wait 2-3 seconds for AI analysis
+4. Read natural language explanation:
+   - Verdict (Strong Fit / Possible Fit / Not a Fit)
+   - Top reasons for/against
+   - Hiring recommendation
+```
+
+**D. Compare Two Candidates Head-to-Head**
+```
+1. Click "+ Compare" on first candidate
+2. Click "+ Compare" on second candidate
+3. Blue bar appears at top showing both selected
+4. Click "⚡ Compare with AI"
+5. See: Winner, Strengths, Weaknesses,
+   Final Recommendation
+```
+
+**E. Analyze a Job Description**
+```
+1. Go to /hr/jd (click "JD Analyzer" in navbar)
+2. Paste any job description in the text box
+   (or click "Use Sample JD" to test)
+3. Click "🔍 Find Best Candidates"
+4. AI shows:
+   - Parsed JD (skills, experience, location)
+   - Top 10 matching candidates ranked by
+     semantic similarity %
+```
+
+**F. Update Candidate Status**
+```
+1. Select a candidate from dashboard
+2. Use the dropdown at bottom of detail panel
+3. Choose: Applied / Screening / Shortlisted /
+   Rejected / Hired
+4. Status updates immediately in database
+```
+
+**G. Export Ranked Results**
+```
+1. Click "📥 Export CSV" button (top right of dashboard)
+2. CSV downloads automatically with all candidates,
+   all scores, and recommendations
+3. This is your judge submission file
+```
+
+---
+
+### 🧑‍💻 For Candidates
+
+**A. Browse Open Jobs**
+```
+1. Go to / (homepage)
+2. Click "Candidate Portal" card
+3. Browse list of open positions
+4. See: title, company, location,
+   required skills, experience needed
+```
+
+**B. Apply to a Job**
+```
+1. On Jobs page, click "Apply Now →" on any job
+2. Redirects to /candidate with Job ID auto-filled
+3. Continue to resume upload (see below)
+```
+
+**C. Upload Resume (Two Ways)**
+
+*Option 1 — Upload PDF:*
+```
+1. Go to /candidate
+2. Click "📄 Upload PDF" tab
+3. Drag and drop your PDF, or click to browse
+4. Enter your Email (required for login later)
+5. Enter GitHub username (optional, for verification)
+6. Click "Analyze PDF with AI →"
+7. Wait 5-8 seconds for AI processing
+```
+
+*Option 2 — Paste Text:*
+```
+1. Go to /candidate
+2. Click "✏️ Paste Text" tab
+3. Paste your resume text in the box
+4. Enter your Email
+5. Click "Analyze Resume with AI →"
+```
+
+**D. View Your Results**
+```
+After upload, you instantly see:
+- Your parsed name, email
+- Top skill detected
+- Years of experience calculated
+- Skills detected (tags)
+- "Take Skill Test →" button
+```
+
+**E. Take the 60-Second Skill Test**
+```
+1. Click "Take Skill Test →" after upload
+   (or go to /test)
+2. Read the test rules carefully:
+   - 60 seconds only
+   - Find and fix the bug
+   - Tab switching is detected and penalized
+   - Refreshing increases difficulty
+3. Click "Start Test →"
+4. AI generates a unique buggy code snippet
+   in your strongest programming language
+5. Read the code, find the bug
+6. Type your fix or explanation in the text box
+7. Submit before timer hits 0
+8. See your score + AI feedback instantly
+```
+
+**F. Login to Check Your Profile**
+```
+1. Go to /login?role=candidate
+2. Enter the SAME email used during resume upload
+3. Click "Sign In as Candidate"
+4. View your Profile page:
+   - Application status (Applied/Shortlisted/etc)
+   - Overall Skill Trust Score
+   - Score breakdown (Semantic, GitHub, Test, etc)
+   - Skill Radar Chart (Claimed vs Verified)
+   - Test completion status
+```
+
+---
+
+## 🔄 Complete End-to-End Flow
+
+```
+HR Side:
+  1. Login as Admin
+  2. Paste JD in JD Analyzer
+  3. AI extracts requirements + finds matches
+  4. Click candidate → Get AI explanation
+  5. Compare top 2 candidates
+  6. Update status to "Shortlisted"
+  7. Export CSV for records
+
+Candidate Side:
+  1. Browse Jobs page
+  2. Click Apply Now on a job
+  3. Upload resume (PDF or text)
+  4. AI parses skills automatically
+  5. Take 60-second skill test
+  6. Login later to check status/score
+```
 
 ---
 
@@ -135,18 +292,10 @@ Outside India:                              → x0.87
 Create `backend/.env` file:
 
 ```env
-# ============================================
-# TALENTLENS AI — Environment Configuration
-# ============================================
-
 # --- Google Gemini AI (FREE) ---
-# Get key at: https://aistudio.google.com/app/apikey
-# No credit card required
 GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 # --- MongoDB Atlas (FREE) ---
-# Create free cluster at: https://www.mongodb.com/atlas
-# Format: mongodb+srv://username:password@cluster.xxxxx.mongodb.net/dbname
 MONGODB_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/talentlens_ai
 
 # --- Server Config ---
@@ -162,9 +311,6 @@ GEMINI_MODEL=gemini-2.5-flash
 EMBEDDING_MODEL=gemini-embedding-001
 
 # --- GitHub API (Optional) ---
-# Without token: 60 req/hr
-# With token: 5000 req/hr
-# Create at: https://github.com/settings/tokens
 GITHUB_TOKEN=optional_github_personal_access_token
 ```
 
@@ -174,19 +320,17 @@ GITHUB_TOKEN=optional_github_personal_access_token
 GEMINI_API_KEY:
   1. Go to https://aistudio.google.com
   2. Sign in with Google account
-  3. Click "Get API Key"
-  4. Click "Create API Key"
-  5. Copy and paste into .env
+  3. Click "Get API Key" → "Create API Key"
+  4. Copy and paste into .env
 
 MONGODB_URI:
   1. Go to https://www.mongodb.com/atlas
-  2. Create free account
-  3. Create M0 cluster (free forever)
-  4. Click "Connect" → "Drivers"
-  5. Copy connection string
-  6. Replace <password> with your password
-  7. Replace myFirstDatabase with talentlens_ai
-  8. Add 0.0.0.0/0 to Network Access
+  2. Create free account → M0 cluster
+  3. Click "Connect" → "Drivers"
+  4. Copy connection string
+  5. Replace <password> with your password
+  6. Replace myFirstDatabase with talentlens_ai
+  7. Add 0.0.0.0/0 to Network Access
 ```
 
 ---
@@ -194,116 +338,60 @@ MONGODB_URI:
 ## 🚀 Complete Setup Guide
 
 ### Prerequisites
-
 ```
-Node.js 20+    → https://nodejs.org (download LTS)
+Node.js 20+    → https://nodejs.org
 Git            → https://git-scm.com
-MongoDB Atlas  → https://www.mongodb.com/atlas (free account)
-Gemini API Key → https://aistudio.google.com (free)
+MongoDB Atlas  → free account
+Gemini API Key → free key
 ```
 
 ### Step 1 — Clone Repository
-
 ```bash
 git clone https://github.com/YOUR_USERNAME/talentlens-ai.git
 cd talentlens-ai
 ```
 
 ### Step 2 — Backend Setup
-
 ```bash
-# Go to backend folder
 cd backend
-
-# Install all packages
 npm install
-
-# Create environment file
 cp .env.example .env
-# Windows:
-# copy .env.example .env
-
-# Open .env and fill in your keys
-# GEMINI_API_KEY = your key from aistudio.google.com
-# MONGODB_URI    = your Atlas connection string
+# Fill in GEMINI_API_KEY and MONGODB_URI
 ```
 
 ### Step 3 — Start Backend Server
-
 ```bash
-# Make sure you are in backend folder
-cd backend
-
-# Start development server
 npm run dev
-
-# You should see:
 # ✅ MongoDB Atlas connected
 # 🚀 Server running → http://localhost:5000
-# 📋 Health check → http://localhost:5000/health
 ```
 
-### Step 4 — Frontend Setup
-
+### Step 4 — Frontend Setup (new terminal)
 ```bash
-# Open NEW terminal window
-# Go to frontend folder
 cd frontend
-
-# Install all packages
 npm install
 ```
 
 ### Step 5 — Start Frontend
-
 ```bash
-# Make sure you are in frontend folder
-cd frontend
-
-# Start development server
 npm run dev
-
-# You should see:
-# VITE ready in 1207ms
 # Local: http://localhost:5173
 ```
 
-### Step 6 — Open App
-
-```
-Open browser → http://localhost:5173
-You will see TalentLens AI landing page!
-```
-
-### Step 7 — Load Hackathon Dataset
-
+### Step 6 — Load Hackathon Dataset
 ```bash
-# Open NEW terminal window
 cd backend
-
-# Process and score all 50 candidates
 node src/utils/processHackathonData.js
-# Output: dataset/ranked_candidates.csv
-
-# Import candidates to MongoDB
 node src/utils/importHackathonCandidates.js
-# You should see:
-# ✅ MongoDB connected
-# Importing 50 candidates...
-# ✅ Done! Imported: 50
 ```
 
-### Step 8 — Login and Explore
-
+### Step 7 — Login and Explore
 ```
-HR Admin Login:
-  URL:      http://localhost:5173/login?role=admin
-  Email:    admin@talentlens.ai
-  Password: admin123
+HR Admin:    /login?role=admin
+             admin@talentlens.ai / admin123
 
-Candidate Login:
-  URL:      http://localhost:5173/login?role=candidate
-  Email:    email used during resume upload
+Candidate:   /login?role=candidate
+             use email from resume upload
 ```
 
 ---
@@ -311,28 +399,24 @@ Candidate Login:
 ## 📋 Quick Start (All Commands)
 
 ```bash
-# 1. Clone
 git clone https://github.com/YOUR_USERNAME/talentlens-ai.git
 cd talentlens-ai
 
-# 2. Backend (Terminal 1)
 cd backend
 npm install
 cp .env.example .env
-# Fill .env with GEMINI_API_KEY and MONGODB_URI
 npm run dev
 
-# 3. Frontend (Terminal 2)
+# new terminal
 cd frontend
 npm install
 npm run dev
 
-# 4. Load Data (Terminal 3)
+# new terminal
 cd backend
 node src/utils/importHackathonCandidates.js
 
-# 5. Open browser
-# http://localhost:5173
+# open http://localhost:5173
 ```
 
 ---
@@ -343,45 +427,45 @@ node src/utils/importHackathonCandidates.js
 talentlens-ai/
 ├── backend/
 │   ├── src/
-│   │   ├── server.js              ← Entry point
+│   │   ├── server.js
 │   │   ├── models/
-│   │   │   ├── Candidate.js       ← MongoDB schema
-│   │   │   └── Job.js             ← Job schema
+│   │   │   ├── Candidate.js
+│   │   │   └── Job.js
 │   │   ├── routes/
-│   │   │   ├── candidates.js      ← Upload + search
-│   │   │   ├── jobs.js            ← Job CRUD
-│   │   │   ├── explain.js         ← AI explainer
-│   │   │   ├── jdparser.js        ← JD analyzer
-│   │   │   ├── test.js            ← Micro test
-│   │   │   ├── github.js          ← Verification
-│   │   │   ├── dashboard.js       ← Rankings + CSV
-│   │   │   └── auth.js            ← Login
+│   │   │   ├── candidates.js
+│   │   │   ├── jobs.js
+│   │   │   ├── explain.js
+│   │   │   ├── jdparser.js
+│   │   │   ├── test.js
+│   │   │   ├── github.js
+│   │   │   ├── dashboard.js
+│   │   │   └── auth.js
 │   │   └── utils/
-│   │       ├── geminiClient.js    ← AI wrapper
-│   │       ├── resumeParser.js    ← Parse logic
-│   │       ├── redrobScorer.js    ← Main algorithm
-│   │       ├── scoreCalculator.js ← Formula
+│   │       ├── geminiClient.js
+│   │       ├── resumeParser.js
+│   │       ├── redrobScorer.js
+│   │       ├── scoreCalculator.js
 │   │       ├── processHackathonData.js
 │   │       └── importHackathonCandidates.js
 │   ├── dataset/
-│   │   ├── sample_candidates.json ← Redrob dataset
-│   │   └── ranked_candidates.csv  ← Judge submission
-│   ├── .env.example               ← Environment template
+│   │   ├── sample_candidates.json
+│   │   └── ranked_candidates.csv
+│   ├── .env.example
 │   └── package.json
 ├── frontend/
 │   └── src/
 │       ├── pages/
-│       │   ├── Landing.jsx        ← Home page
-│       │   ├── Login.jsx          ← Auth page
-│       │   ├── Dashboard.jsx      ← HR dashboard
-│       │   ├── JDParser.jsx       ← JD analyzer
-│       │   ├── Jobs.jsx           ← Job listings
-│       │   ├── CandidatePortal.jsx← Resume upload
-│       │   ├── CandidateProfile.jsx← My profile
-│       │   └── TestArena.jsx      ← Skill test
+│       │   ├── Landing.jsx
+│       │   ├── Login.jsx
+│       │   ├── Dashboard.jsx
+│       │   ├── JDParser.jsx
+│       │   ├── Jobs.jsx
+│       │   ├── CandidatePortal.jsx
+│       │   ├── CandidateProfile.jsx
+│       │   └── TestArena.jsx
 │       └── utils/
-│           ├── api.js             ← HTTP client
-│           └── auth.js            ← Auth helpers
+│           ├── api.js
+│           └── auth.js
 └── README.md
 ```
 
@@ -390,28 +474,27 @@ talentlens-ai/
 ## 🔧 Troubleshooting
 
 ```
-Problem: MongoDB connection failed
-Fix:     Check MONGODB_URI in .env
-         Atlas → Network Access → Add 0.0.0.0/0
+MongoDB connection failed
+→ Check MONGODB_URI in .env
+→ Atlas → Network Access → Add 0.0.0.0/0
 
-Problem: Gemini API error 404
-Fix:     Check GEMINI_API_KEY in .env
-         Verify key at aistudio.google.com
+Gemini API error 404
+→ Check GEMINI_API_KEY in .env
+→ Verify key at aistudio.google.com
 
-Problem: npm install fails
-Fix:     node --version must show v20+
-         Download from nodejs.org
+npm install fails
+→ node --version must show v20+
 
-Problem: Port 5000 in use
-Fix:     Change PORT=5001 in .env
+Port 5000 in use
+→ Change PORT=5001 in .env
 
-Problem: Frontend blank page
-Fix:     Start backend first
-         Check browser console for errors
+Frontend blank page
+→ Start backend first
+→ Check browser console
 
-Problem: Embedding fails
-Fix:     Wait 1 minute (rate limit)
-         Free tier: 1500 req/day
+Embedding fails
+→ Wait 1 minute (rate limit)
+→ Free tier: 1500 req/day
 ```
 
 ---
@@ -439,18 +522,13 @@ Fix:     Wait 1 minute (rate limit)
 
 > This project was built with Claude AI as a coding assistant —
 > similar to how developers use GitHub Copilot or ChatGPT.
->
 > All architectural decisions, business logic, scoring algorithms,
 > and final implementations were directed, reviewed, and verified
-> by the developer.
->
-> The multi-signal scoring approach, behavioral signal integration,
-> smart disqualification engine, and explainability features
-> represent original problem-solving and domain understanding.
-> Claude helped write the code — the developer designed the solution.
->
-> Using AI tools to build AI products demonstrates exactly the
-> kind of AI-first thinking this hackathon celebrates.
+> by the developer. The multi-signal scoring approach, behavioral
+> signal integration, smart disqualification engine, and
+> explainability features represent original problem-solving and
+> domain understanding. Claude helped write the code — the
+> developer designed the solution.
 
 ---
 
